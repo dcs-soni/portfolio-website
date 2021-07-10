@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 :root {
-    --primary: #87C0BD;
+    --primary: #3A405A;
     --gray: #F3F4F6;
-    --off-cyan: #e9f7f7;
+    --off-cyan: #AEC5EB;
     --dark-gray:#6B7280;
 }
 
@@ -35,8 +35,12 @@ hr {
 }
 
 .container-center {
-    max-width: 600px;
+    max-width: 700px;
     margin: auto;
+}
+
+p {
+    margin: 2rem 1rem;
 }
 
 /** Lists **/
@@ -47,7 +51,7 @@ hr {
 
 .lists-item-inline {
     display: inline;
-    padding: 0rem 0.5rem;
+    padding: 0rem 0.7rem;
     /* text-align: right; */
 
 }
@@ -68,7 +72,7 @@ hr {
     min-width: 140px;
     border-radius: 0.5rem;
     padding: 0.5rem;
-    /* margin: 1rem; */
+    margin: 1rem 0 0 1rem;
 }
 
 
@@ -85,7 +89,7 @@ hr {
 /** nav **/
 .navigation{
     background-color: var(--primary);
-    padding: 1rem 0rem;
+    padding: 2.5rem 0rem;
     color: white;
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
@@ -98,6 +102,8 @@ hr {
 
 .nav-brand{
     padding-left: 20px;
+    display: inline-block;
+
 }
 
 
@@ -108,7 +114,9 @@ hr {
 }
 
 .nav-items {
-    text-align: center;
+    padding-right: 100px;
+    float: right;
+    /* display: inline-block; */
 }
 
 .navigation .active {
@@ -121,6 +129,7 @@ hr {
     max-width: 350px;
     display: block;
     margin: auto;
+    padding-top: 10px;
 }
 
 .model-heading {
@@ -128,18 +137,27 @@ hr {
     text-align: center;
 }
 
+/**Header in Blogs**/
+.container .main {
+    color: #87C0BD;
+}
+
+
 /** Sections **/
 
 .section {
-    padding: 2rem;
+    padding: 1rem;
+    max-width: 100vw;
 }
 .section h1 {
     text-align: center;
-    padding: 2rem;
+    padding: 1rem;
+    margin: 2px;
 }
 
 .ow{
     background-color: var(--off-cyan);
+    max-width: 100vw;
 }
 
 
@@ -157,3 +175,5 @@ footer {
 .footer .link {
     color: white;
 }
+
+
