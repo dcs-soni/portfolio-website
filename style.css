@@ -1,14 +1,216 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 :root {
-    --primary: #3A405A;
+    --primary: #364652;
+    --black: #0F0F0F;
+
     --gray: #F3F4F6;
-    --off-cyan: #AEC5EB;
+    --off-cyan: #F6F5F5;
     --dark-gray:#6B7280;
 }
 
+* {
+    box-sizing: border-box;
+}
+
+html {
+    max-width: 100%;
+    /* overflow-x: hidden; */
+}
 
 body {
+    margin: 0;
+    padding: 0;
+    /* width: 100%; */
+}
+
+
+
+
+/* Navigation bar */
+
+.navigation{
+    width: 100%;
+    background-color: var(--primary);
+    padding: 1rem 1rem;
+    color: white;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    /* padding-bottom: 2p; */
+}
+
+.nav-brand{
+    font-weight: bold;
+    font-size: 5vh;
+    padding-left: 40px;
+    display: block;
+    padding-top: 1rem;
+    /* text-align: center; */
+
+}
+
+.navigation .link{
+    color: white;
+    text-decoration:  none;
+}
+
+
+.nav-items {
+    padding-right: 0.5rem;
+    font-size: 1.3rem;
+    /* display: inline; */
+    text-align: right;
+}
+
+
+.navigation .active {
+    font-weight: bold;
+}
+
+
+
+/** Model and heading **/
+.model {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    width: 600px;
+    padding-top: 20px;
+
+
+}
+
+.model-heading {
+    font-size: 2.2rem;
+    text-align: center;
+}
+
+.highlight {
+    color: var(--primary);
+}
+
+
+
+/** Section **/
+
+.section {
+    padding: 1rem;
+    max-width: 100vw; 
+    color: var(--black);
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    font-size: large;
+}
+
+.container-center {
+    max-width: 800px;
+    margin: auto;
+    margin-bottom: 40px;
+}
+
+
+.colored-block{
+    margin: auto;
+    background-color: var(--primary);
+    color: var(--off-cyan);
+    border: 1px solid var(--primary);
+    border-radius: 15px;
+}
+
+.projects, .blogs h1 {
+    color: var(--primary);
+}
+
+
+/** Buttons **/
+
+.btn-projects {
+    border: 1px solid var(--primary);
+    color: var(--primary); 
+    padding: 4px;
+    border-radius: 4px;
+ 
+}
+.btn-projects:hover{
+    background-color: var(--primary);
+    color: var(--off-cyan);
+}
+
+.btn-primary {
+    color: var(--off-cyan);
+    border: 1px solid var(--off-cyan);
+    padding: 4px;
+    border-radius: 4px;
+    margin-top: 4px;
+}
+
+.btn-primary:hover{
+    background-color: var(--off-cyan);
+    color: var(--primary);
+}
+
+.filled-btn{
+    background-color: var(--off-cyan);
+    color: var(--primary);
+}
+
+.filled-btn:hover {
+    background-color: var(--primary);
+    color: var(--off-cyan);
+}
+
+.live-project {
+    background-color: var(--primary);
+    color: var(--off-cyan);
+}
+
+/** Links **/
+
+.link {
+    list-style: none; 
+    text-decoration: none;
+}
+
+.lists-item-inline {
+    display: inline;
+    padding: 0rem 0.7rem;
+    text-align: right; 
+}
+
+footer .link {
+    color: var(--off-cyan);
+}
+
+.navigation .active {
+    font-weight: bold;
+}
+
+/** Footer **/
+
+footer {
+    background-color: var(--primary);
+    padding: 2rem 1rem;
+    text-align: center;
+    color: var(--gray);
+
+}
+
+.footer-header{
+    padding: 2rem 1rem;
+}
+
+
+
+
+
+
+
+/*
+
+
+body {
+    background-color: var(--off-cyan);
     font-family: 'Montserrat', sans-serif;
     margin: 0px;
 }
@@ -21,7 +223,7 @@ hr {
     font-size: 0.8 rem;
 }
 
-/** Containers **/
+* Containers *
 .container-fluid {
     padding-left: 1rem;
     padding-right: 1rem;
@@ -37,13 +239,14 @@ hr {
 .container-center {
     max-width: 700px;
     margin: auto;
+    margin-bottom: 40px;
 }
 
 p {
     margin: 2rem 1rem;
 }
 
-/** Lists **/
+* Lists *
 
 .list-non-bullet {
     list-style: none;
@@ -52,27 +255,28 @@ p {
 .lists-item-inline {
     display: inline;
     padding: 0rem 0.7rem;
-    /* text-align: right; */
+    /* text-align: right; 
 
 }
 
 
-/** links **/
+ * links * 
 
 .link {
-    /* list-style: none; */
+    list-style: none; 
     text-decoration: none;
 }
 
 .primary-link{
     text-decoration: none;
-    color: white;
-    background-color:  var(--primary);
+    color: var(--off-cyan);
+     background-color:  var(--primary); 
     width: max-content;
     min-width: 140px;
     border-radius: 0.5rem;
     padding: 0.5rem;
     margin: 1rem 0 0 1rem;
+    border: 1px solid var(--primary);
 }
 
 
@@ -86,21 +290,24 @@ p {
     padding: 0.5rem;
 }
 
-/** nav **/
+* nav *
 .navigation{
     background-color: var(--primary);
     padding: 2.5rem 0rem;
     color: white;
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
+    width: 100%;
 }
 
-.navigation .nav-brand{
-    font-weight: bold;
+/* .navigation .nav-brand{
     font-size: 1.2rem;
-}
+} */
 
+/*
 .nav-brand{
+    font-weight: bold;
+    font-size: 3.5vh;
     padding-left: 20px;
     display: inline-block;
 
@@ -114,9 +321,9 @@ p {
 }
 
 .nav-items {
-    padding-right: 100px;
+    padding-right: 0.5rem;
     float: right;
-    /* display: inline-block; */
+    /* display: inline-block; 
 }
 
 .navigation .active {
@@ -124,30 +331,33 @@ p {
 }
 
 
-/** Header **/
+* Header *
 .container .model {
-    max-width: 350px;
+    max-width: 90vw;
     display: block;
     margin: auto;
     padding-top: 10px;
 }
 
 .model-heading {
-    font-size: larger;
+    font-size: 2.2rem;
     text-align: center;
 }
 
-/**Header in Blogs**/
+*Header in Blogs*
 .container .main {
     color: #87C0BD;
 }
 
 
-/** Sections **/
+* Sections *
 
 .section {
     padding: 1rem;
-    max-width: 100vw;
+     max-width: 100vw; 
+    margin: auto;
+    color: var(--black);
+    
 }
 .section h1 {
     text-align: center;
@@ -156,12 +366,38 @@ p {
 }
 
 .ow{
-    background-color: var(--off-cyan);
-    max-width: 100vw;
+    margin: auto;
+    color: var(--off-cyan);
+    
+}
+
+*Buttons on Home Page*
+.btn-projects {
+    border: 1px solid var(--primary);
+    color: var(--primary);  
+}
+.btn-projects:hover{
+    background-color: var(--primary);
+    color: var(--off-cyan);
+}
+
+.btn-primary {
+    color: var(--primary);
+    border: 1px solid var(--primary);
+}
+
+.btn-primary:hover{
+    background-color: var(--primary);
+    color: var(--off-cyan);
+}
+
+.filled-btn{
+    background-color: var(--primary);
+    color: var(--primary);
 }
 
 
-/** Footer **/
+* Footer *
 footer {
     background-color: var(--primary);
     padding: 2rem 1rem;
@@ -170,10 +406,19 @@ footer {
 
 .footer-header{
     padding: 2rem 1rem;
+    color: var(--gray);
 }
 
 .footer .link {
-    color: white;
+    color: var(--gray);
 }
 
+
+Blogs
+.blogs-img {
+    display: block;
+    margin: auto;
+    padding-top: 10px;
+
+} 
 
