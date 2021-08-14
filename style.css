@@ -1,12 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@300&family=Crimson+Text:ital@1&family=Signika:wght@300&display=swap');
 
 :root {
     --primary: #364652;
     --black: #0F0F0F;
+    --secondary: #5e6f7c;
+    --off-cyan: #F6F5F5;
+
 
     --gray: #F3F4F6;
-    --off-cyan: #F6F5F5;
-    --dark-gray:#6B7280;
+    --dark-gray: #6B7280;
 }
 
 * {
@@ -29,7 +31,7 @@ body {
 
 /* Navigation bar */
 
-.navigation{
+.navigation {
     width: 100%;
     background-color: var(--primary);
     padding: 1rem 1rem;
@@ -39,7 +41,7 @@ body {
     /* padding-bottom: 2p; */
 }
 
-.nav-brand{
+.nav-brand {
     font-weight: bold;
     font-size: 5vh;
     padding-left: 40px;
@@ -49,9 +51,11 @@ body {
 
 }
 
-.navigation .link{
+.navigation .link {
+    margin-bottom: 0px;
+    margin-top: 0px;
     color: white;
-    text-decoration:  none;
+    text-decoration: none;
 }
 
 
@@ -65,6 +69,12 @@ body {
 
 .navigation .active {
     font-weight: bold;
+}
+
+.navigation,
+header,
+h1 {
+    font-family: 'Signika', sans-serif;
 }
 
 
@@ -95,31 +105,46 @@ body {
 
 .section {
     padding: 1rem;
-    max-width: 100vw; 
+    max-width: 100vw;
     color: var(--black);
     width: 80%;
     margin: auto;
     text-align: center;
-    font-size: large;
+    font-size: 1.4rem;
+    border-radius: 11px;
+    box-shadow: 0px 56px 145px -5px var(--off-cyan);
+}
+
+
+.section a {
+    font-size: 1.2rem;
+}
+
+.section p {
+    font-family: 'Catamaran', sans-serif;
+    font-size: 1.2rem;
 }
 
 .container-center {
     max-width: 800px;
     margin: auto;
-    margin-bottom: 40px;
+    margin-bottom: 45px;
 }
 
 
-.colored-block{
+.colored-block {
     margin: auto;
     background-color: var(--primary);
     color: var(--off-cyan);
     border: 1px solid var(--primary);
     border-radius: 15px;
+    opacity: 1;
+    box-shadow: 0px 0px 13px 4px var(--primary)
 }
 
-.projects, .blogs h1 {
-    color: var(--primary);
+.projects,
+.blogs h1 {
+    color: var(--pr);
 }
 
 
@@ -127,14 +152,18 @@ body {
 
 .btn-projects {
     border: 1px solid var(--primary);
-    color: var(--primary); 
+    color: var(--primary);
     padding: 4px;
     border-radius: 4px;
- 
+    transition: 0.4s;
+
 }
-.btn-projects:hover{
+
+.btn-projects:hover {
     background-color: var(--primary);
     color: var(--off-cyan);
+    transition: 0.4s;
+
 }
 
 .btn-primary {
@@ -143,39 +172,55 @@ body {
     padding: 4px;
     border-radius: 4px;
     margin-top: 4px;
+    transition: 0.4s;
+
 }
 
-.btn-primary:hover{
+.btn-primary:hover {
     background-color: var(--off-cyan);
     color: var(--primary);
+    transition: 0.4s;
+
 }
 
-.filled-btn{
+.filled-btn {
     background-color: var(--off-cyan);
     color: var(--primary);
+    transition: 0.4s;
+
 }
 
 .filled-btn:hover {
     background-color: var(--primary);
     color: var(--off-cyan);
+    transition: 0.4s;
+
 }
 
 .live-project {
     background-color: var(--primary);
     color: var(--off-cyan);
+    transition: 0.4s;
+
+}
+
+.live-project:hover {
+    background-color: var(--secondary);
+    color: var(--off-cyan);
+    border: 1px solid var(--primary);
 }
 
 /** Links **/
 
 .link {
-    list-style: none; 
+    list-style: none;
     text-decoration: none;
 }
 
 .lists-item-inline {
     display: inline;
     padding: 0rem 0.7rem;
-    text-align: right; 
+    text-align: right;
 }
 
 footer .link {
@@ -189,6 +234,7 @@ footer .link {
 /** Footer **/
 
 footer {
+    margin-top: 1rem;
     background-color: var(--primary);
     padding: 2rem 1rem;
     text-align: center;
@@ -196,10 +242,25 @@ footer {
 
 }
 
-.footer-header{
-    padding: 2rem 1rem;
+.footer-header {
+    padding: 0.5rem 1rem;
 }
 
 
+/* links */
+.section a {
+    padding: 0.5rem;
+}
 
+@media only screen and (max-width: 900px) {
 
+    .section {
+        font-size: 1.1rem;
+        padding: 1rem;
+        width: 85%;
+    }
+
+    .section p {
+        font-size: 1rem;
+    }
+}
