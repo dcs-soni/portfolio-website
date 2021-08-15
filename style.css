@@ -35,7 +35,7 @@ body {
     width: 100%;
     background-color: var(--primary);
     padding: 1rem 1rem;
-    color: white;
+    color: var(--off-cyan);
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
     /* padding-bottom: 2p; */
@@ -51,6 +51,11 @@ body {
 
 }
 
+.nav-brand a {
+    text-decoration: none;
+    color: var(--off-cyan);
+}
+
 .navigation .link {
     margin-bottom: 0px;
     margin-top: 0px;
@@ -64,6 +69,7 @@ body {
     font-size: 1.3rem;
     /* display: inline; */
     text-align: right;
+    margin: 0px;
 }
 
 
@@ -91,8 +97,9 @@ h1 {
 }
 
 .model-heading {
-    font-size: 2.2rem;
+    font-size: 2.8rem;
     text-align: center;
+    color: var(--primary);
 }
 
 .highlight {
@@ -239,6 +246,9 @@ footer {
     padding: 2rem 1rem;
     text-align: center;
     color: var(--gray);
+    font-family: 'Catamaran', sans-serif;
+    font-size: 1.4rem;
+
 
 }
 
@@ -253,6 +263,18 @@ footer {
 }
 
 @media only screen and (max-width: 900px) {
+
+    .nav-brand {
+        padding-left: 10px;
+    }
+
+    .nav-items {
+        margin-top: 30px;
+    }
+
+    .model-heading {
+        font-size: 1.6rem;
+    }
 
     .section {
         font-size: 1.1rem;
